@@ -12,9 +12,7 @@ class _FavoriteContactsState extends State<FavoriteContacts> {
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
-          color: Theme
-              .of(context)
-              .accentColor,
+          color: Theme.of(context).accentColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(35.0),
             topRight: Radius.circular(35.0),
@@ -49,23 +47,36 @@ class _FavoriteContactsState extends State<FavoriteContacts> {
               ),
             ),
             Container(
-              height: 100.0,
-              color: Theme
-                  .of(context)
-                  .primaryColor,
+              height: 120.0,
+              color: Theme.of(context).accentColor,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.only(
-                  left: 20.0,
+                  left: 17.0,
                   top: 14.0,
                 ),
                 itemCount: favorites.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 11.0),
-                    child: Text(
-                      favorites[index].name,
-                      style: TextStyle(fontSize: 20.0),
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 5.0),
+                          child: CircleAvatar(
+                            radius: 35.0,
+                            backgroundImage:
+                                AssetImage(favorites[index].imageurl),
+                          ),
+                        ),
+                        Text(
+                          favorites[index].name,
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            color: Colors.blueGrey[700],
+                          ),
+                        ),
+                      ],
                     ),
                   );
                 },
