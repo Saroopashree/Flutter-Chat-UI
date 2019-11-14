@@ -59,35 +59,92 @@ final User wendy = User(
   imageurl: 'assets/images/wendy.jpg',
 );
 
+final User alex = User(
+  id: 7,
+  name: 'Alexander',
+  imageurl: 'assets/images/alex.jpg',
+);
 
-List<User> favorites = [ erica, joshua, kathy, steve, wendy ];
+final User andy = User(
+  id: 8,
+  name: 'Andy',
+  imageurl: 'assets/images/andy.jpg',
+);
+
+final User beatrice = User(
+  id: 9,
+  name: 'Beatrice',
+  imageurl: 'assets/images/beatrice.jpg',
+);
+
+final User brian = User(
+  id: 10,
+  name: 'Brian',
+  imageurl: 'assets/images/brian.jpg',
+);
+
+final User violet = User(
+  id: 11,
+  name: 'Violet',
+  imageurl: 'assets/images/violet.jpg',
+);
+
+List<User> favorites = [ erica, joshua, brian, steve, wendy, violet ];
 
 List<Message> chats = [
   Message(
     sender: joshua,
-    time: '4.30 PM',
+    time: '7.02 PM',
     text: 'What\'s up?',
     isLiked: false,
     unRead: true,
   ),
   Message(
     sender: kathy,
-    time: '4.42 PM',
+    time: '6.47 PM',
     text: 'Had a great time with Jonathan. You missed it!!!',
     isLiked: true,
     unRead: false,
   ),
   Message(
     sender: wendy,
-    time: '4.55 PM',
+    time: '6.47 PM',
     text: 'Can\'t wait anymore. I\'m going home.',
     isLiked: false,
     unRead: false,
   ),
   Message(
     sender: erica,
-    time: '5.53 PM',
+    time: '6.16 PM',
     text: 'Everything went well. And as you know Aaron was awarded the entertainer of the year. :p',
+    isLiked: true,
+    unRead: false,
+  ),
+  Message(
+    sender: brian,
+    time: '6.15 PM',
+    text: 'Hi there!',
+    isLiked: false,
+    unRead: true,
+  ),
+  Message(
+    sender: beatrice,
+    time: '6.11 PM',
+    text: 'I don\'t know what Harry is up to. This is not going great :!',
+    isLiked: false,
+    unRead: false,
+  ),
+  Message(
+    sender: violet,
+    time: '5.53 PM',
+    text: 'Reached Beijing. It was an awesome travel. I\'d like to come here with you sometime later',
+    isLiked: true,
+    unRead: false,
+  ),
+  Message(
+    sender: andy,
+    time: '5.29 PM',
+    text: 'Hey dude! Come over here. We shall play video games.',
     isLiked: false,
     unRead: true,
   ),
