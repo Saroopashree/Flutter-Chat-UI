@@ -1,3 +1,5 @@
+import 'package:chat_ui/models/message_model.dart';
+import 'package:chat_ui/widgets/chat_lists.dart';
 import 'package:chat_ui/widgets/favorite_contacts.dart';
 
 import '../widgets/category_selector.dart';
@@ -36,6 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
             iconSize: 28.0,
             padding: EdgeInsets.symmetric(horizontal: 15.0),
             onPressed: () {},
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: CircleAvatar(backgroundImage: AssetImage(currentUser.imageurl), radius: 27.0,),
           )
         ],
         elevation: 0.0,
@@ -43,7 +49,37 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: <Widget>[
           CategorySelector(),
-          FavoriteContacts(),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).accentColor,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(35.0),
+                  topRight: Radius.circular(35.0),
+                ),
+              ),
+              height: 150.0,
+              child: Column(
+                children: <Widget>[
+                  FavoriteContacts(),
+                  SizedBox(height: 10.0,),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(35.0),
+                          topRight: Radius.circular(35.0),
+                        ),
+                      ),
+                      height: 150.0,
+                      child: ChatList(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

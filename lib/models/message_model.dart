@@ -73,7 +73,7 @@ List<Message> chats = [
   Message(
     sender: kathy,
     time: '4.42 PM',
-    text: 'Having a great time with Jonathan. You missed this!!!',
+    text: 'Had a great time with Jonathan. You missed it!!!',
     isLiked: true,
     unRead: false,
   ),
